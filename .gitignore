@@ -1,0 +1,64 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+*.log
+
+# Python package and build files
+dist/
+build/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+*.whl
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+tox/
+nox/
+
+# Environment variables and secrets
+.env
+.env.local
+*.env
+secrets.json
+
+# Miscellaneous
+*.bak
+*.tmp
+temp/
+tmp/
+*.cache
+
+# Project-specific (optional, adjust as needed)
+TP/venv/  # If you keep the virtual environment in TP/
+*.log
+*.prof  # Profiling output files (e.g., from cProfile)
+
+# XML
+repomix-output.xml
