@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PyBooks</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .message { color: green; }
+        .error { color: red; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, textarea, select { width: 100%; max-width: 500px; padding: 5px; }
+        textarea { height: 100px; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>PyBooks</h1>
+    <p>Um indexador de livros para salvar, listar, categorizar e excluir livros.</p>
+    
+    {% if message %}
+        <p class="{% if error %}error{% else %}message{% endif %}">{{ message }}</p>
+    {% endif %}
+    
+    <h2>Adicionar Livro</h2>
+    <form method="POST" action="/add">
+        <div class="form-group">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Descrição:</label>
+            <textarea id="description" name="description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="genre">Gênero:</label>
+            <select id="genre" name="genre">
+                <option value="Fiction">Ficção</option>
+                <option value="Non-Fiction">Não Ficção</option>
+                <option value="Sci-Fi">Ficção Científica</option>
+                <option value="Fantasy">Fantasia</option>
+                <option value="Mystery">Mistério</option>
+                <option value="Biography">Biografia</option>
+            </select>
+        </div>
+        <button type="submit">Adicionar Livro</button>
+    </form>
+    
+    <h2>Livros</h2>
+    {% if books %}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Gênero</th>
+                <th>Status</th>
+                <th>Adicionado em</th>
+                <th>Ações</th>
+            </tr>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.id }}</td>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.description }}</td>
+                    <td>{{ book.genre }}</td>
+                    <td>{{ book.status }}</td>
+                    <td>{{ book.added_at }}</td>
+                    <td>
+                        {% if book.status != 'read' %}
+                            <a href="/mark_read/{{ book.id }}">Marcar como lido</a> |
+                        {% endif %}
+                        <a href="/remove/{{ book.id }}">Remover</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>Nenhum livro encontrado.</p>
+    {% endif %}
+</body>
+</html>

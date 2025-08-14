@@ -10,6 +10,9 @@ venv/
 env/
 ENV/
 
+# XML
+repomix-output.xml
+
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
@@ -59,6 +62,3 @@ tmp/
 TP/venv/  # If you keep the virtual environment in TP/
 *.log
 *.prof  # Profiling output files (e.g., from cProfile)
-
-# XML
-repomix-output.xml
