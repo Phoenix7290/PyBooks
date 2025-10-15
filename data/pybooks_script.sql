@@ -1,0 +1,22 @@
+-- Inserir dados
+INSERT INTO users (name, username, password_hash, role, department, salary, join_date, email, active) VALUES
+('Alice Johnson', 'alicej', 'hash123abc', 'admin', 'fiction', 5000.00, '2023-01-15', 'alice@example.com', TRUE),
+('Bob Smith', 'bobs', 'hash456def', 'user', 'non-fiction', 3000.00, '2023-02-20', 'bob@example.com', TRUE),
+('Carol Davis', 'carold', 'hash789ghi', 'librarian', 'tech', 4000.00, '2023-03-10', 'carol@example.com', TRUE),
+('David Wilson', 'davidw', 'hash101jkl', 'user', 'fiction', 2500.00, '2023-04-05', 'david@example.com', FALSE),
+('Eve Martinez', 'evem', 'hash112mno', 'admin', 'non-fiction', 5500.00, '2023-05-12', 'eve@example.com', TRUE),
+('Frank Garcia', 'frankg', 'hash131pqr', 'user', 'tech', 3200.00, '2023-06-18', 'frank@example.com', TRUE),
+('Grace Lee', 'gracel', 'hash415stu', 'librarian', 'fiction', 4500.00, '2023-07-22', 'grace@example.com', TRUE),
+('Henry Thompson', 'henryt', 'hash161vwx', 'user', 'non-fiction', 2800.00, '2023-08-30', 'henry@example.com', FALSE),
+('Ivy Harris', 'ivyh', 'hash718yz', 'admin', 'tech', 6000.00, '2023-09-14', 'ivy@example.com', TRUE),
+('Jack Clark', 'jackc', 'hash192abc', 'user', 'fiction', 3100.00, '2023-10-25', 'jack@example.com', TRUE),
+('Kara Lewis', 'karal', 'hash220def', 'librarian', 'non-fiction', 4200.00, '2023-11-08', 'kara@example.com', TRUE),
+('Leo Walker', 'leow', 'hash231ghi', 'user', 'tech', 2900.00, '2023-12-19', 'leo@example.com', TRUE),
+('Mia Hall', 'miah', 'hash242jkl', 'admin', 'fiction', 5200.00, '2024-01-03', 'mia@example.com', TRUE),
+('Noah Young', 'noahy', 'hash253mno', 'user', 'non-fiction', 3300.00, '2024-02-11', 'noah@example.com', FALSE),
+('Olivia King', 'oliviak', 'hash264pqr', 'librarian', 'tech', 4600.00, '2024-03-27', 'olivia@example.com', TRUE),
+('Paul Scott', 'pauls', 'hash275stu', 'user', 'fiction', 2700.00, '2024-04-15', 'paul@example.com', TRUE),
+('Quinn Green', 'quinng', 'hash286vwx', 'admin', 'non-fiction', 5800.00, '2024-05-20', 'quinn@example.com', TRUE),
+('Riley Adams', 'rileya', 'hash297yz', 'user', 'tech', 3400.00, '2024-06-09', 'riley@example.com', TRUE),
+('Sophia Baker', 'sophiab', 'hash308abc', 'librarian', 'fiction', 4300.00, '2024-07-14', 'sophia@example.com', FALSE),
+('Tom Carter', 'tomc', 'hash319def', 'user', 'non-fiction', 3000.00, '2024-08-28', 'tom@example.com', TRUE);
