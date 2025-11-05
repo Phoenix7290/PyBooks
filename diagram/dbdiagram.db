@@ -1,0 +1,25 @@
+Table users {
+  id serial [pk]
+  name varchar(100) [not null]
+  username varchar(50) [unique, not null]
+  password_hash varchar(255) [not null]
+  role varchar(50) [not null]
+  department varchar(50)
+  salary numeric(10,2) [default: 0.00]
+  join_date date [not null]
+  email varchar(100)
+  active boolean [default: true]
+}
+
+Table books {
+  id serial [pk]
+  title varchar(255) [not null]
+  description text
+  genre varchar(100)
+  status varchar(50) [default: 'to_read']
+  added_at timestamp
+  user_id int
+}
+
+// Relacionamento
+Ref: books.user_id > users.id // 1:N
