@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "O Pequeno Príncipe – Edição Especial",
+    "description": "Clássico infantil sobre amor e amizade – versão atualizada",
+    "genre": "Fiction",
+    "status": "read",
+    "added_at": "2024-09-01T10:00:00",
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "title": "1984 – Nova Tradução",
+    "description": "Distopia política de George Orwell – edição revisada",
+    "genre": "Fiction",
+    "status": "read",
+    "added_at": "2024-09-02T12:30:00",
+    "user_id": 2
+  },
+  {
+    "title": "Dom Quixote",
+    "description": "A aventura do cavaleiro da triste figura",
+    "genre": "Fiction",
+    "status": "to_read",
+    "added_at": "2025-04-05T08:20:00",
+    "user_id": 3
+  },
+  {
+    "title": "Clean Architecture",
+    "description": "Boas práticas de arquitetura de software",
+    "genre": "Tech",
+    "status": "to_read",
+    "added_at": "2025-11-20T15:45:00",
+    "user_id": 9
+  }
+]

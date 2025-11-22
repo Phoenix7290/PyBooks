@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 # Config
-DB_URL = "postgresql+psycopg2://postgres:SUASENHA@localhost/pybooks_db"
+DB_URL = "postgresql+psycopg2://postgres@localhost/pybooks_db"
 engine = create_engine(DB_URL, echo=False)
 Session = sessionmaker(bind=engine)
 

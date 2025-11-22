@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 
-DB_URL = "postgresql+psycopg2://postgres:SUASENHA@localhost/pybooks_db"
+DB_URL = "postgresql+psycopg2://postgres@localhost/pybooks_db"
 engine = create_engine(DB_URL)
 Session = sessionmaker(bind=engine)
 
