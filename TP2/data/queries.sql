@@ -26,4 +26,4 @@ SELECT name, salary, department FROM users WHERE salary BETWEEN 3000.00 AND 5000
 
 SELECT role, MAX(salary) AS max_salary FROM users GROUP BY role;
 
-SELECT name, join_date, role, salary FROM users WHERE YEAR(join_date) = 2024 AND (role = 'user' OR salary < 3000.00);
+SELECT name, join_date, role, salary FROM users WHERE EXTRACT(YEAR FROM join_date) = 2024 AND (role = 'user' OR salary < 3000.00);

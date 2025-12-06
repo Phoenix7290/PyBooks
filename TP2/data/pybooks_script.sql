@@ -20,3 +20,4 @@ INSERT INTO users (name, username, password_hash, role, department, salary, join
 ('Riley Adams', 'rileya', 'hash297yz', 'user', 'tech', 3400.00, '2024-06-09', 'riley@example.com', TRUE),
 ('Sophia Baker', 'sophiab', 'hash308abc', 'librarian', 'fiction', 4300.00, '2024-07-14', 'sophia@example.com', FALSE),
 ('Tom Carter', 'tomc', 'hash319def', 'user', 'non-fiction', 3000.00, '2024-08-28', 'tom@example.com', TRUE);
+ON CONFLICT (username) DO NOTHING;

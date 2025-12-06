@@ -1,3 +1,4 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -12,10 +13,11 @@ logging.basicConfig(filename='tp5/scraped_books.log', level=logging.INFO,
 
 # Conexão com seu banco atual
 conn = psycopg2.connect(
-    host="localhost",
-    database="pybooks_db",
-    user="postgres",
-    password=""
+    host=os.getenv("DB_HOST", "localhost"),
+    database=os.getenv("DB_NAME", "pybooks_db"),
+    user=os.getenv("DB_USER", "postgres"),
+    password=os.getenv("DB_PASSWORD", ""),
+    port=os.getenv("DB_PORT", "5432")
 )
 cur = conn.cursor()
 
